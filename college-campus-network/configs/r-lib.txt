@@ -1,0 +1,70 @@
+hostname R-LIB
+!
+no ip cef
+no ipv6 cef
+!
+license udi pid CISCO1941/K9 sn FTX15244D4K-
+!
+spanning-tree mode pvst
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0.210
+ encapsulation dot1Q 210
+ ip address 192.168.210.1 255.255.255.0
+!
+interface GigabitEthernet0/0.220
+ encapsulation dot1Q 220
+ ip address 192.168.220.1 255.255.255.0
+!
+interface GigabitEthernet0/0.230
+ encapsulation dot1Q 230
+ ip address 192.168.230.1 255.255.255.0
+!
+interface GigabitEthernet0/0.240
+ encapsulation dot1Q 240
+ ip address 192.168.240.1 255.255.255.0
+!
+interface GigabitEthernet0/1
+ ip address 192.168.1.10 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0/0
+ switchport mode access
+!
+interface FastEthernet0/0/1
+ switchport mode access
+!
+interface FastEthernet0/0/2
+ switchport mode access
+!
+interface FastEthernet0/0/3
+ switchport mode access
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 1
+ log-adjacency-changes
+ network 192.168.1.8 0.0.0.3 area 0
+ network 192.168.210.0 0.0.0.255 area 0
+ network 192.168.220.0 0.0.0.255 area 0
+ network 192.168.230.0 0.0.0.255 area 0
+ network 192.168.240.0 0.0.0.255 area 0
+!
+ip classless
+!
+ip flow-export version 9
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!

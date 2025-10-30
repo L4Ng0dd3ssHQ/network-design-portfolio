@@ -1,0 +1,102 @@
+hostname Switch
+!
+spanning-tree mode pvst
+!
+interface FastEthernet0/1
+ description student_desktop
+ switchport access vlan 110
+ switchport mode access
+!
+interface FastEthernet0/2
+ description student_laptop
+ switchport access vlan 110
+ switchport mode access
+!
+interface FastEthernet0/3
+ description faculty_desktop
+ switchport access vlan 120
+ switchport mode access
+!
+interface FastEthernet0/4
+ description faculty_laptop
+ switchport access vlan 120
+ switchport mode access
+!
+interface FastEthernet0/5
+ description printer_lib
+ switchport access vlan 130
+ switchport mode access
+!
+interface FastEthernet0/6
+ description phone1_lib
+ switchport access vlan 140
+ switchport mode access
+!
+interface FastEthernet0/7
+ description phone2_lib
+ switchport access vlan 240
+ switchport mode access
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+ description link-to-r-bldg-b-g0/0
+ switchport trunk allowed vlan 110,120,130,140
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan110
+ mac-address 0007.ec27.bb01
+ no ip address
+ shutdown
+!
+ip classless
+!
+ip flow-export version 9
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+end

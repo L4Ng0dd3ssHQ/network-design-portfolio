@@ -1,0 +1,72 @@
+FIREWALL#show running-config
+: Saved
+:
+ASA Version 8.4(2)
+!
+hostname FIREWALL
+names
+!
+interface Ethernet0/0
+ switchport access vlan 4
+!
+interface Ethernet0/1
+ switchport access vlan 3
+!
+interface Ethernet0/2
+ switchport access vlan 4
+!
+interface Ethernet0/3
+!
+interface Ethernet0/4
+!
+interface Ethernet0/5
+!
+interface Ethernet0/6
+!
+interface Ethernet0/7
+!
+interface Vlan1
+ no nameif
+ no security-level
+ no ip address
+ shutdown
+!
+interface Vlan2
+ nameif inside
+ security-level 100
+ ip address 192.168.254.2 255.255.255.252
+!
+interface Vlan4
+ nameif outside
+ security-level 0
+ ip address 203.0.113.2 255.255.255.252
+!
+object network INSIDE-NET
+ subnet 172.16.0.0 255.240.0.0
+ nat (inside,outside) dynamic interface
+!
+route outside 0.0.0.0 0.0.0.0 203.0.113.1 1
+!
+access-list INSIDE-IN extended permit ip any 172.16.50.0 255.255.255.0
+access-list INSIDE-IN extended permit icmp any any
+access-list OUTSIDE-OUT extended permit icmp any any
+!
+!
+access-group INSIDE-IN in interface inside
+access-group OUTSIDE-OUT in interface outside
+!
+!
+!
+!
+!
+telnet timeout 5
+ssh timeout 5
+!
+dhcpd auto_config outside
+!
+!
+dhcpd enable 
+!
+!
+!
+!

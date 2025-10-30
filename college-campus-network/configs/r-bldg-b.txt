@@ -1,0 +1,70 @@
+hostname R-BLDG-B
+!
+ip cef
+no ipv6 cef
+!
+license udi pid CISCO1941/K9 sn FTX1524FX6P-
+!
+spanning-tree mode pvst
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0.110
+ encapsulation dot1Q 110
+ ip address 192.168.110.1 255.255.255.0
+!
+interface GigabitEthernet0/0.120
+ encapsulation dot1Q 120
+ ip address 192.168.120.1 255.255.255.0
+!
+interface GigabitEthernet0/0.130
+ encapsulation dot1Q 130
+ ip address 192.168.130.1 255.255.255.0
+!
+interface GigabitEthernet0/0.140
+ encapsulation dot1Q 140
+ ip address 192.168.140.1 255.255.255.0
+!
+interface GigabitEthernet0/1
+ ip address 192.168.1.6 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0/0
+ switchport mode access
+!
+interface FastEthernet0/0/1
+ switchport mode access
+!
+interface FastEthernet0/0/2
+ switchport mode access
+!
+interface FastEthernet0/0/3
+ switchport mode access
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 1
+ log-adjacency-changes
+ network 192.168.1.4 0.0.0.3 area 0
+ network 192.168.110.0 0.0.0.255 area 0
+ network 192.168.120.0 0.0.0.255 area 0
+ network 192.168.130.0 0.0.0.255 area 0
+ network 192.168.140.0 0.0.0.255 area 0
+!
+ip classless
+!
+ip flow-export version 9
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
