@@ -2,7 +2,7 @@
 
 
 --------------------------------------------
-##1. Business Scenario##
+1. Business Scenario
 
 A company operates a Headquarters (HQ) and a Branch (BR) office that must securely 
 communicate over the public internet while maintaining proper 
@@ -74,5 +74,6 @@ This repository emphasizes:
 •	Structured incident reporting
 •	Repeatable validation procedures
 •	Professional portfolio presentation
+
 
 
