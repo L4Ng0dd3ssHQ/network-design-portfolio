@@ -57,10 +57,12 @@ o	Simulated internet transport
 •	All configurations documented and version controlled in GitHub
  ---------------------------------------------------------------------------------------------
 ##5. Repository Structure##
+configs/
 docs/
 ├── design/
 ├── incidents/
 └── verification/
+packet_tracer/
 -----------------------------------------------------------------------------------
 
 This repository emphasizes:
@@ -68,3 +70,4 @@ This repository emphasizes:
 •	Structured incident reporting
 •	Repeatable validation procedures
 •	Professional portfolio presentation
+
