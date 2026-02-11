@@ -1,0 +1,23 @@
+Switch>enable
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#hostname SW-BR-ACC
+SW-BR-ACC(config)#no ip domain-lookup
+SW-BR-ACC(config)#int fa0/24
+SW-BR-ACC(config-if)#description Uplink to R-BR g0/0
+SW-BR-ACC(config-if)#switchport mode trunk
+
+SW-BR-ACC(config-if)#
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to up
+s
+% Ambiguous command: "s"
+SW-BR-ACC(config-if)#switchport trunk native vlan 99
+SW-BR-ACC(config-if)#switchport trunk allowed vlan 10,20,40,99
+SW-BR-ACC(config-if)#no shut
+SW-BR-ACC(config-if)#end
+SW-BR-ACC#
+%SYS-5-CONFIG_I: Configured from console by console
+wr
+Building configuration...
