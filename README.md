@@ -17,7 +17,7 @@ Each project demonstrates core networking concepts such as VLAN segmentation, in
 - ASA firewall securing outbound traffic
 - Documentation includes addressing plan and verification results  
 
-### 🏢 [Mini Enterprise Network](./mini-site-enterprise-network)
+### 🏢 [Mini Site Enterprise Network](./mini-site-enterprise-network)
 **Level:** Advanced  
 **Focus:** Static Routing, GRE Tunnel, IPsec, and DHCP  
 **Highlights:**
