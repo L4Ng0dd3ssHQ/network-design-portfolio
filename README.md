@@ -17,16 +17,7 @@ Each project demonstrates core networking concepts such as VLAN segmentation, in
 - ASA firewall securing outbound traffic
 - Documentation includes addressing plan and verification results  
 
-### 🏢 [Mini Enterprise Network](./mini-enterprise-network)
-**Level:** Beginner → Intermediate  
-**Focus:** VLAN + DHCP + SSH  
-**Highlights:**
-- VLANs for Students, Faculty, Admin
-- Central DHCP with relay agent
-- SSH management on switch (VLAN 30)
-- ACLs for limited VLAN access  
-
-### 🛰️ [HQ + Branch Network](./hq-branch-network)
+### 🏢 [Mini Enterprise Network](./mini-site-enterprise-network)
 **Level:** Advanced  
 **Focus:** Static Routing, GRE Tunnel, IPsec, and DHCP  
 **Highlights:**
@@ -51,13 +42,15 @@ Each project demonstrates core networking concepts such as VLAN segmentation, in
 
 ## 🧠 About This Portfolio
 This repository demonstrates both design and configuration skills across small to medium-sized networks.  
-All projects were built and tested using **Cisco Packet Tracer**, with documentation created in **Microsoft Word** and **PDF** formats.
+All projects were built and tested using **Cisco Packet Tracer**, with documentation created in **Microsoft Word** and **VS Code** formats.
 
+🌟 Current Certifications:
+- CCST Networking (Exp. 2031)
+  
 📚 Certifications in Progress:
 - CompTIA Network+ (N10-009)  
 - Google Cybersecurity
-- MS-900
-- AZ-900 
+
 
 ---
 
