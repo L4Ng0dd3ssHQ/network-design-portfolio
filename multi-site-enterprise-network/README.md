@@ -19,9 +19,9 @@ This project simulates a realistic small enterprise architecture
 using Cisco IOS in Packet Tracer.
  ------------------------------------------------------------------------------------------------------------
 
-##2. Architecture Overview**##
+2. Architecture Overview
 
-**Sites**
+Sites
 •	HQ
 o	Layer 3 switch
 o	Access switch
@@ -32,15 +32,16 @@ o	Edge router
 •	ISP Router
 o	Simulated internet transport
 
-**Connectivity Model**
+Connectivity Model
 •	802.1Q trunking for VLAN transport
 •	Router-on-a-Stick (Branch)
 •	Routed L3 link (HQ)
 •	/30 WAN point-to-point links
 •	GRE tunnel overlay across ISP underlay
+
 ----------------------------------------------------------------------------- 
 
-##3. Technical Objectives##
+3. Technical Objectives
 •	Implement VLAN segmentation
 •	Configure inter-VLAN routing
 •	Establish WAN /30 links
@@ -49,20 +50,23 @@ o	Simulated internet transport
 •	Document failures and remediation in SRE format
 -----------------------------------------------------------------------------------------------------
 
-##4. Constraints & Assumptions##
+4. Constraints & Assumptions
 •	Single ISP router simulating internet
 •	No hardware redundancy
 •	Static underlay routing
 •	GRE used for overlay transport
 •	All configurations documented and version controlled in GitHub
+
  ---------------------------------------------------------------------------------------------
-##5. Repository Structure##
+ 
+5. Repository Structure
 configs/
 docs/
 ├── design/
 ├── incidents/
 └── verification/
 packet_tracer/
+
 -----------------------------------------------------------------------------------
 
 This repository emphasizes:
@@ -70,4 +74,5 @@ This repository emphasizes:
 •	Structured incident reporting
 •	Repeatable validation procedures
 •	Professional portfolio presentation
+
 
